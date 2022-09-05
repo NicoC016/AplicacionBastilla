@@ -1,35 +1,31 @@
-import React from "react"
 
 
-export class sidebars extends React.Component{
-    render() {
-        return (
-            <><nav className="navbar navbar-expand-lg fixed-top">
 
-                <div id="mySidenav" className="sidenav">
-                    <a href="javascript:void(0)" className="closebtn" onClick={() => closeNav()}>&times;</a>
-                    <a href="/index"><i className="bi bi-list"></i> Menú</a>
-                    <a href="/products"><i className="bi bi-laptop"></i> Productos</a>
-                    <a href="/users"><i className="bi bi-people-fill"></i> Clientes</a>
-                    <a href="/category"><i className="bi bi-grid"></i> Categorias</a>
+export function Sidebars() {
+    return (
+        <><nav className="navbar navbar-expand-lg fixed-top">
 
-                </div>
+            <div id="mySidenav" className="sidenav">
+                <a href="javascript:void(0)" className="closebtn" onClick={() => closeNav()}>&times;</a>
+                <a href="/"><i className="bi bi-list"></i> iniciar Sesión</a>
 
-                <div id="main">
-                    <span className="text-white" onClick={() => openNav()}>&#9776; </span>
-                </div>
-                <div className="container">
-                    {/* <a className="navbar-brand" href="/index"><img src="img/Programacion 2.png" alt="Node.js icon" className="logo22"></a> */}
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+            </div>
 
-                </div>
-            </nav></>)
-    }
+            <div id="main">
+                <span className="openNav text-white"  onClick={() => openNav()}>&#9776; </span>
+            </div>
+            <div className="container">
+                {/* <a className="navbar-brand" href="/index"><img src="img/Programacion 2.png" alt="Node.js icon" className="logo22"></a> */}
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
+            </div>
+        </nav></>)
 }
+
+
 function openNav() {
     //@ts-ignore
     document.getElementById("mySidenav").style.width = "250px";
@@ -43,4 +39,3 @@ function closeNav() {
     //@ts-ignore
     document.getElementById("main").style.marginLeft = "0";
 }
-        
